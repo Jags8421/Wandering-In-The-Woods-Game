@@ -8,9 +8,9 @@ This repository contains the Source Code, Executables, Documentation (Design Doc
 
 Wandering in the Woods is an educational computing game for kids in grades K-5 that teaches them the basics of computation and computational thinking by playing a video game. The K-2 and 3-5 levels get progressively more difficult.
 
-K-2 Level: The grid is square, and the players start at opposite corners of the principal diagonal. They move randomly until they meet one another.
+**K-2 Level:** The grid is square, and the players start at opposite corners of the principal diagonal. They move randomly until they meet one another.
 
-3-5 Level: Rectangular grid with the user providing the Dimensions of the grid, and the number of players along with the coordinates of the starting position of each player. The maximum allowed player limit is 4. Players wander randomly till they meet, and when they meet the statistics are displayed to the User.
+**3-5 Level:** Rectangular grid with the user providing the Dimensions of the grid, and the number of players along with the coordinates of the starting position of each player. The maximum allowed player limit is 4. Players wander randomly till they meet, and when they meet the statistics are displayed to the User.
 
 It’s a modular game, with separate classes for each level, a simple user interface and built-in audio prompts to reinforce learning.
 
