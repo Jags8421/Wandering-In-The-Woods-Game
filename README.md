@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains the Source Code, Executables, Documentation (Design Document and User's Guide) along with how to execute the Game: "Wandering in the Woods". This project is developed as part of the course: **Software Engineering** taught by Dr. Fadi Wedyan.
+This repository contains the Source Code, Executables, Documentation (Design Document and User's Guide) along with how to execute the Game: ***Wandering in the Woods***. This project is developed as part of the course: **Software Engineering** taught by **Dr. Fadi Wedyan**.
 
 ## About the Game
 
@@ -14,7 +14,7 @@ Wandering in the Woods is an educational computing game for kids in grades K-5 t
 
 It’s a modular game, with separate classes for each level, a simple user interface and built-in audio prompts to reinforce learning.
 
-## Steps and Install and Run the Game
+## Steps to Install and Run the Game
 
 - Download the 'executables.zip' Archive which contains 2 files:
   - `game_launcher.exe`: Executable file which contains the code to run the program. All the python libraries and modules that are required to run the program are bundled into this single executable file.
