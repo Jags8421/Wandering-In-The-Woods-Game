@@ -126,6 +126,7 @@ class WanderingGame(AbstractWanderingGame):
         heading.pack(pady=10)
 
         stats_text = (
+            f"Total Moves: {sum(self.__move_counts)}\n"
             f"Longest Run Without Meeting: {longest_run}\n"
             f"Shortest Run: {shortest_run}\n"
             f"Average Run: {average_run:.2f}"
@@ -267,14 +268,26 @@ class StartScreen:
     def __get_coordinates(self):
         try:
             # Get and validate user inputs
-            self.rows = int(self.rows_entry.get())
-            self.cols = int(self.cols_entry.get())
-            self.num_players = int(self.__players_entry.get())
+            try:
+                self.rows = int(self.rows_entry.get())
+            except ValueError:
+                raise ValueError("Only Numbers are allowed as an Input for rows.")
+            try:
+                self.cols = int(self.cols_entry.get())
+            except ValueError:
+                raise ValueError("Only Numbers are allowed as an Input for columns.")
+            try:
+                self.num_players = int(self.__players_entry.get())
+            except ValueError:
+                raise ValueError("Only Numbers are allowed as an Input for number of players.")
+            
             if not (2 <= self.num_players <= 4):
                 raise ValueError("Number of players must be between 2 and 4.")
-            if self.rows < 2 or self.cols < 2 or self.rows > 15 or self.cols > 15:
-                raise ValueError("Grid must be at least 2x2 and must be less than 15x15.")
-            if self.num_players > self.rows * self.cols:
+            if self.rows < 2 or self.rows > 15:
+                raise ValueError("Number of rows in the grid must be at least 2 and at most 15")
+            if self.cols < 2 or self.cols > 15:
+                raise ValueError("Number of columns in the grid must be at least 2 and must be less than 15.")
+            if self.num_players >= self.rows * self.cols:
                 raise ValueError("More players than available grid spaces.")
 
             self.coordinates = []  # Reset coordinates
